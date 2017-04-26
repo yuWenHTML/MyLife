@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  name="viewport">
+	    <style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+ul {
+	list-style: none;
+}
+.container {
+	width: 7.5rem;
+	margin: 0 auto;
+	position: relative;
+}
+.header {
+	height: 0.6rem;
+	line-height: 0.6rem;
+	width: 100%;
+	background-color: #f29004;
+	text-align: center;
+	color: #fff;
+	font-size: 0.36rem;
+}
+.header img {
+	float: left;
+	padding-left: 0.2rem;
+	padding-top: 0.12rem;
+	width: 0.2rem;
+	height: 0.4rem;
+}
+
+/*头部*/
+a {
+	text-decoration: none
+}
+
+/*主体*/
+.main {
+	padding: 0.2rem;
+}
+.clear {
+	overflow: hidden;
+}
+.key_suo {
+	background: url("img/suo.png") 0 0 no-repeat;
+	background-size: 100% 100%;
+	height: 0.8rem;
+}
+.main input {
+	margin-top: 0.05rem;
+	margin-right: 0.5rem;
+	float: right;
+	width: 75%;
+	height: 0.7rem;
+	border: none;
+	outline: none;
+}
+.key_suo .img1 {
+	width: 0.4rem;
+	height: 0.4rem;
+	float: left;
+	padding-top: 0.23rem;
+	padding-left: 0.6rem;
+}
+.shop_item p {
+	line-height: 0.90rem;
+	font-size: 0.3rem;
+	text-align: center;
+	color: #a7a7a7;
+}
+.shop_item ul {
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.shop_item ul li {
+	margin-top: 0.2rem;
+	width: 1.45rem;
+	height: 0.55rem;
+	background: url("img/suosuo2.png") 0 0 no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+	line-height: 0.55rem;
+	color: #a7a7a7;
+	font-size: 0.3rem;
+}
+.goods {
+	height: 1.4rem;
+	margin-top: 0.5rem;
+}
+.goods .goods_item {
+	width: 1.4rem;
+	height: 1.4rem;
+	border: 1px solid #f2f2f2;
+	display: inline-block;
+}
+.main .goods .goods_item .gds_img {
+	width: 100%;
+	height: 100%;
+}
+.goods .gds_inst {
+	margin-left: 0.2rem;
+	float: right;
+	margin-right: 20%;
+	margin-top: 0.1rem;
+}
+.goods .gds_inst p {
+	font-size: 0.3rem;
+}
+.goods .gds_inst h2 {
+	font-size: 0.26rem;
+	color: #de0000;
+	margin-top: 0.3rem;
+}
+
+/*遮罩层*/
+#mask {
+	width: 100%;
+	height: 100%;
+	background-color: #ccc;
+	opacity: 0.5;
+	position: fixed;
+	top: 0;
+}
+
+/*提示*/
+.alert {
+	position: fixed;
+	width: 6.8rem;
+	height: 7.2rem;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	text-align: center;
+	background-color: #fff;
+}
+.alert .altop {
+	height: 0.6rem;
+	background-color: #f2f2f2;
+	padding: 0.3rem 0.2rem;
+}
+.alert .altop span {
+	font-size: 0.3rem;
+	color: #999999;
+	float: left;
+}
+.alert .altop #close {
+	cursor: pointer;
+	width: 0.2rem;
+	height: 0.2rem;
+	float: right;
+}
+.alert .altop button {
+	width: 2.1rem;
+	height: 0.7rem;
+	background: url(img/button.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	border: none;
+	margin-top: -0.5rem;
+	color: #fff;
+	font-size: 0.3rem;
+}
+
+/*导航栏*/
+.vipNav {
+	position: fixed;
+	bottom: 0;
+	width: 7.5rem;
+	background-color: white;
+	z-index: 999;
+}
+.vipNav a {
+	text-decoration: none;
+}
+.vipNav ul {
+	display: flex;
+	text-align: center;
+	height: 1.0rem;
+	line-height: 0.8rem;
+	border-top: 1px solid #ccc;
+	justify-content: space-around;
+	padding-top: 0.1rem;
+}
+.vipNav ul li {
+	width: 1.0rem;
+	-webkit-box-flex: 1;
+}
+.vipNav ul li a {
+	color: #808080;
+	font-size: 0.24rem;
+	padding-top: 0.6rem;
+}
+.vipNav ul li:nth-child(1) a {
+	color: orange;
+	font-size: 0.24rem;
+	padding-top: 0.6rem;
+}
+.vipNav li:nth-child(1) {
+	background: url(img/home2.png) 50% 0 no-repeat;
+	background-size: 50%;
+}
+.vipNav li:nth-child(2) {
+	background: url(img/vip.png) 50% 0 no-repeat;
+	background-size: 50%;
+}
+.vipNav li:nth-child(3) {
+	background: url(img/Grid.png) 50% 0 no-repeat;
+	background-size: 50%;
+}
+.vipNav li:nth-child(4) {
+	background: url(img/shopcar.png) 50% 0 no-repeat;
+	background-size: 50%;
+}
+.vipNav li:nth-child(5) {
+	background: url(img/my.png) 50% 0 no-repeat;
+	background-size: 45%;
+}
+	    </style>
+	<title>搜索</title>
+</head>
+<body>
+	<div class="container">
+	<!-- header -->
+		<header class="header">
+			<a href="index.html">
+				<img src="img/back.png">
+			</a>
+			<span>搜索</span>
+		</header>
+		
+		<!-- 主体 -->
+		<div class="main" >
+			<div class="key_suo clear">
+				<img src="img/suosuo.png" class="img1">
+				<input type="text" placeholder="输入关键词/商品名称" style="font-size: 18px" id="ipt">
+			</div>
+			<div class="shop_item" id="main_gs">
+				<p>热门搜索</p>
+				<ul>
+					<li>小挎包</li>
+					<li>皮带</li>
+					<li>背包</li>
+					<li>鞋子</li>
+					<li>椅子</li>
+					<li>书包</li>
+					<li>剪子</li>
+					<li>刀子</li>
+				</ul>
+			</div>
+			<div class="goods" style="display: none" id="goods">
+				<div class="goods_item">
+					<img src="img/goods1.png" class="gds_img">					
+				</div>
+				<div class="gds_inst">
+					<p>坚果特产山核桃奶油味碧根....</p>
+					<h2>￥ 29.5</h2>
+				</div>
+			</div>			
+		</div>
+
+		<!-- 遮罩层 -->
+		<div id="mask" style="display: none"></div>
+		<div class="alert" style="display: none" id="alert">
+			<div class="altop">
+				<span>留言</span>
+				<img src="img/close.png" id="close">
+				<textarea placeholder="想买什么商品" style="width: 6.2rem;height: 4.3rem;margin-top: 0.6rem;resize: none;font-size: 0.3rem"></textarea>
+				<button>提交</button>
+			</div>
+		</div>
+		<!-- 导航栏 -->
+		<nav class="vipNav">
+			<ul>
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="../great/vip.html">会员</a>
+				</li>
+				<li>
+					<a href="../classify/classify_index.html">分类</a>
+				</li>
+				<li>
+					<a href="../shop/shopCart.html">购物车</a>
+				</li>
+				<li>
+					<a href="../login/ywSign.html">我的</a>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- container -->
+	</div>
+</body>
+<script type="text/javascript">
+	(function(doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function() {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            if (clientWidth >= 750) {
+                docEl.style.fontSize = '100px';
+            } else {
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+var ipt = document.getElementById("ipt");
+var main_gs = document.getElementById("main_gs");
+var goods = document.getElementById("goods");
+var mask = document.getElementById("mask")
+var alert1 = document.getElementById("alert")
+var close = document.getElementById("close")
+// ipt.addEventListener("")
+ipt.onclick = function(){	
+		main_gs.style.display = "none";
+		goods.style.display = 'block';
+	
+}	
+ipt.oninput = function(){
+	if(ipt.value == 1){
+		goods.style.display = "none";
+		main_gs.style.display = "none";
+		mask.style.display = 'block';
+		alert1.style.display = "block";
+		}
+}
+close.onclick = function(){
+	mask.style.display = "none";
+	alert1.style.display = "none";
+	main_gs.style.display = "block";
+	
+}
+</script>
+</html>

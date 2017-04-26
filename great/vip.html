@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta charset="UTF-8" />
+    <title>会员</title>
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/vip.css" />
+    <style type="text/css">
+        a{
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="vip">
+        <header>
+            <span>会员杂锦</span>
+        </header>
+        <!--swiper-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/5.png" /></div>
+                <div class="swiper-slide"><img src="images/vipSwiperNav2.png.png" /></div>
+                <div class="swiper-slide"><img src="images/vipSwiperNav3.png" /></div>
+                <div class="swiper-slide"><img src="images/vipSwiperNav4.png" /></div>
+                <div class="swiper-slide"><img src="images/vipSwiperNav5.png" /></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!--列表内容-->
+        <div class="vipLie">
+            <div class="vipL">
+            <a href="vipFoodD1.html">
+                <img src="images/1.png" alt="" />
+                <h2>喜得佳正宗香港黄金鱼蛋250g </h2>
+                <p><span>￥10.9 </span> 原价:￥12.8</p>
+                </a>
+            </div>
+            <div class="vipL vipL2">
+            <a href="vipFoodD1.html">
+                <img src="images/2.png" alt="" />
+                <h2>鱼豆腐干720g鱼板烧香辣鱼豆干辣条麻辣零食小吃</h2>
+                <p><span>￥29.5</span> 原价:￥42.5</p>
+                </a>
+            </div>
+            <div class="vipL">
+            <a href="vipFoodD1.html">
+                <img src="images/3.png" alt="" />
+                <h2>盐津铺子蒸鱼丸综合口味200g豆干休闲零食独立小包</h2>
+                <p><span>￥10.9 </span> 原价:￥12.8</p>
+                </a>
+            </div>
+            <div class="vipL">
+            <a href="toothpaste.html">
+                <img src="images/4.png" alt="" />
+                <h2>坚果特产山核桃奶油味碧根果210gx2袋</h2>
+                <p><span>￥29.5</span> 原价:￥42.5</p>
+                </a>
+            </div>
+        </div>
+        <!--页脚部的nav导航-->
+        <nav class="vipNav">
+            <ul>
+                <li>
+                    <a href="../index/index.html">首页</a>
+                </li>
+                <li>
+                    <a href="vip.html">会员</a>
+                </li>
+                <li>
+                    <a href="../classify/classify_index.html">分类</a>
+                </li>
+                <li>
+                    <a href="../shop/shopCart.html">购物车</a>
+                </li>
+                <li>
+                    <a href="../login/ywSign.html">我的</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/rem.js"></script>
+<script type="text/javascript">
+/*--------swiper------*/
+var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    paginationClickable: true,
+    centeredSlides: true,
+    autoplay: 1000,
+    loop: true,
+    observer:true,
+    observeParents:true,
+    autoplayDisableOnInteraction: false
+});
+</script>
+
+</html>

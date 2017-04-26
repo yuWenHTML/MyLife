@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"    name="viewport">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>支付成功</title>
+	<link rel="stylesheet" type="text/css" href="css/h_upgrade.css">
+</head>
+<body>
+	<div class="upgrade_wrap">
+	<!-- 头部 -->
+		<div class="h_upHade">
+			<a href="../home/mine.html"><img src="img/return.png"></a>
+			<span>支付成功</span>
+		</div>
+	<!-- 支付成功 -->
+		<div class="h_scedImg">
+			<img src="img/succeed.png">
+			<p>恭喜你成为VIP会员</p>
+		</div>
+	<!-- 确定 -->
+	<div class="h_btnC">
+		<a href="../../index/index.html"><button class="h_succeedBtn">继续购物</button></a>
+	</div>
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</html>

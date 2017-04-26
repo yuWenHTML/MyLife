@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"    name="viewport">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>我的</title>
+	<link rel="stylesheet" type="text/css" href="css/my_mine.css">
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+	<div class="h_wrap">
+		<!-- 头部 -->
+		<div class="h_head">
+			<div class="portrait"><img src="img/hand_nv.png"><span>凯丽_Kylie</span>
+			<img src="img/zuan.png" class="zuan">
+			<span class="vip">VIP会员</span>
+			</div>
+		</div>
+		<!-- 基本资料 -->
+		<div class="h_basic">
+			<ul>
+				<li class="bom"><a href="../basice/basice.html"><img src="img/data.png" class="top"><span>基本资料</span><img src="img/right.png" class="right"></a></li>
+				<li class="bom"><a href="../order/Yw-Order.html"><img src="img/order.png" class="top"><span>我的订单</span><img src="img/right.png" class="right"></a></li>
+				<li class="bom"><a href="../favorite/h_collect.html"><img src="img/collect.png" class="top"><span>我的收藏</span><img src="img/right.png" class="right"></a></li>
+				<li class="bom"><a href="../wallet/h_myMoney.html"><img src="img/monay.png" class="top"><span>我的钱包</span><img src="img/right.png" class="right"></a></li>
+				<li class="bom"><a href="../site/h_profile.html"><img src="img/addre.png" class="top"><span>收货地址</span><img src="img/right.png" class="right"></a></li>
+				<li><a href="../upgrade/upgradeText.html"><img src="img/vip.png" class="top"><span>升级会员</span><img src="img/right.png" class="right"></a></li>
+			</ul>
+		</div>
+		<!-- 更多 -->
+		<div class="h_more">
+			<ul>
+				<li class="bom"><a href="###"><img src="img/more.png" class="top"><span>更多</span><img src="img/right.png" class="right"></a></li>
+				<li><a href="../../login/ywSign.html"><img src="img/logoff.png" class="top"><span>注销</span><img src="img/right.png" class="right"></a></li>
+			</ul>
+		</div>
+		<!-- 底部导航 -->
+		<div class="h_nav">
+			<ul>
+				<li><a href="../../index/index.html"><img src="img/index.png"><br />首页</a></li>
+				<li><a href="../../great/vip.html"><img src="img/vip2.png"><br />会员</a></li>
+				<li><a href="../../classify/classify_index.html"><img src="img/Grid.png"><br />分类</a></li>
+				<li><a href="../../shop/shopcar.html"><img src="img/shop2.png" class="shop"><br />购物车</a></li>
+				<li class="h_li"><a href="###"><img src="img/my.png" class="my"><br />我的</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"    name="viewport">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>我的收藏</title>
+	<link rel="stylesheet" type="text/css" href="css/h_collect.css">
+</head>
+<body>
+	<div class="h_collectWrap">
+	<!-- 头部 -->
+		<div class="h_collHade">
+			<a href="../home/mine.html"><img src="img/return.png"></a>
+			<span>我的收藏</span>
+			<span class="h_topUp"><a href="h_compile.html">编辑</a></span>
+		</div>
+	<!-- 详情 -->
+		<div class="h_colllect">
+			<ul>
+				<li class="h_bom">
+					<img src="img/nut.png">
+					<span>
+						坚果特产山核桃奶油味碧根...
+					</span><br />
+					<span class="h_price">￥29.5</span>
+				</li>
+				<li>
+					<img src="img/nut.png">
+					<span>
+						坚果特产山核桃奶油味碧根...
+					</span><br />
+					<span class="h_price">￥29.5</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"    name="viewport">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>修改联系方式</title>
+	<link rel="stylesheet" type="text/css" href="css/h_basice.css">
+</head>
+<body>
+	<div class="bas_wrap">
+	<!-- 头部 -->
+		<div class="h_dasHade">
+			<a href="contact.html"><img src="img/return.png"></a>
+			<span>联系方式</span>
+		</div>
+	<!-- 修改联系方式 -->
+		<div class="h_textTel">
+			<ul>
+				<li class="h_bompaw"><input type="text" name="" placeholder="手机号码"></li>
+				<li><input type="text" name="" placeholder="验证码"><a href="###"><img src="img/veri.png"></a></li>
+			</ul>
+		</div>
+		<button class="h_buttonName">确认</button>
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+	// 获取点击按钮
+	$nameBtn = $(".h_buttonName");
+	$ipt = $(".h_textTel ul li input");
+	$nameBtn.click(function(){
+		// alert("修改成功")
+		if($ipt.eq(0).val() == "" || $ipt.eq(1).val() ==""){
+			alert("请输入正确信息！");
+		}else{
+			window.location.href="basice.html";
+		}
+		
+	})
+</script>
+</html>

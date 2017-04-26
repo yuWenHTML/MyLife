@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"    name="viewport">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>我能供应</title>
+	<link rel="stylesheet" type="text/css" href="css/h_basice.css">
+</head>
+<body>
+	<div class="bas_wrap">
+	<!-- 头部 -->
+		<div class="h_dasHade">
+			<a href="basice.html"><img src="img/return.png"></a>
+			<span>我能供应</span>
+		</div>
+	<!-- 修改密码 -->
+		<div class="h_supplyLei">
+			<!-- <div class="clear"></div> -->
+			<p>行业类型：<input type="text" name="" class="h_pdw">
+			</p>
+			<p>我能供应：<input type="text" name="" class="h_pdw">
+			</p>
+			
+			<textarea placeholder="描述" class="h_supply"></textarea>
+			<div class="h_por">
+				图片：<br />
+				<img src="img/jia.png">
+			</div>
+			<button class="h_supp_btn">确认</button>
+		</div>
+		
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</html>

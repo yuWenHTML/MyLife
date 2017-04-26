@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.container {
+    width: 7.5rem;
+    margin: 0 auto;
+    position: relative;
+}
+.header {
+    height: 0.8rem;
+    line-height: 0.8rem;
+    width: 100%;
+    background-color: #f29004;
+    text-align: center;
+    color: #fff;
+    font-size: 0.36rem;
+}
+.header img {
+    float: left;
+    padding-left: 0.2rem;
+    padding-top: 0.2rem;
+    width: 0.2rem;
+    height: 0.4rem;
+}
+.header span {
+    margin-left: -0.3rem;
+}
+input {
+    outline: none;
+}
+button {
+    outline: none;
+}
+
+/*头部*/
+.info li {
+    font-size: 0.3rem;
+    line-height: 0.8rem;
+    text-indent: 0.2rem;
+}
+.space {
+    height: 0.2rem;
+    background-color: #f2f2f2;
+}
+.detailed {
+    padding: 0.25rem 0.2rem;
+}
+.lf {
+    float: left;
+}
+.rg {
+    float: right;
+}
+.detailed li {
+    padding: 0.2rem 0.0rem;
+    border-bottom: 0.01rem solid #ccc;
+}
+.detailed li span {
+    font-size: 0.28rem;
+}
+.clear {
+    overflow: hidden;
+}
+.goodImg {
+    width: 1.4rem;
+    height: 1.4rem;
+    background: url("img/nut.png") 0 0 no-repeat;
+    background-size: 100%;
+}
+.goods_inst {
+    margin-left: 0.2rem;
+    width: 73%;
+}
+.goods_inst p {
+    font-size: 0.3rem;
+    padding-bottom: 0.2rem;
+}
+.goods_inst span {
+    font-size: 0.26rem;
+}
+.detailed input {
+    height: 0.5rem;
+    border: none;
+    margin-left: 0.2rem;
+    width: 75%;
+}
+.footer  p {
+    font-size: 0.28rem;
+}
+.footer button {
+    width: 6.4rem;
+    height: 0.9rem;
+    background: url("img/button4.png") 0 0 no-repeat;
+    background-size: 100%;
+    color: #fff;
+    font-size: 0.34rem;
+    line-height: 0.9rem;
+    text-align: center;
+    border: none;
+}
+   </style>
+    <title>退货</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <header class="header">
+            <a href="Yw-Order.html">
+                <img src="img/return.png">
+            </a>
+            <span>订单详情</span>
+        </header>
+        <!-- main -->
+        <div class="main">
+            <div class="info">
+                <ul>
+                    <li>刘晓心 13562024158</li>
+                    <li>广州市天河区东圃时代TIT广场</li>
+                </ul>
+            </div>
+            <div class="space"></div>
+            <div class="detailed">
+                <ul>
+                    <li class="clear"><span class="lf">购买商品</span><span class="rg">退货</span></li>
+                    <li class="clear">
+                       <div class="goodImg lf"></div> 
+                     	<div class="goods_inst lf">
+                     		<p>坚果特产山核桃奶油味碧根...</p>
+                     		<p style="color: #dadada;font-size: 0.26rem">规格：1盒6片</p>
+                     		<div><h2 class="lf" style="color: red;font-size: 0.26rem">￥ 29.5</h2><span class="rg">x 2</span></div>
+                     	</div>
+                    </li>
+                    <li class="clear"> 
+                    	<span class="lf">运费：</span>
+                    	<span class="rg">￥ 10</span>
+                    </li>
+                    <li class="clear">
+                    	<span class="lf">备注:</span>
+                    	<input class="lf" type="text" placeholder="请输入"
+                    	style="font-size: 0.28rem;margin-top: -0.06rem">
+                    </li>
+                </ul>
+            </div>            
+        </div>
+        <div class="space"></div>
+		<div class="footer detailed">
+			<ul>
+				<li><p>订单详情</p></li>
+				<li style="border-bottom: none">
+					<p>订单编号： SKYJ12525441 </p>
+					<p>创建时间：2015-10-02   12_20</p>
+                    <p>付款时间：2015-10-02   12:36</p>
+                    <p>物流信息：申通物流 5221255142</p>
+                    <p>收货时间：2015-10-02   15:36</p>
+                    <p>退货时间：2015-10-03   13:08</p>
+					<div style="height: 0.3rem"></div>
+				</li>
+			</ul>			
+		</div>
+        <!-- container -->
+    </div>
+</body>
+<script type="text/javascript">
+(function(doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function() {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            if (clientWidth >= 750) {
+                docEl.style.fontSize = '100px';
+            } else {
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"    name="viewport">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>升级会员</title>
+	<link rel="stylesheet" type="text/css" href="css/h_upgrade.css">
+</head>
+<body>
+	<div class="upgrade_wrap">
+	<!-- 头部 -->
+		<div class="h_upHade">
+			<a href="../home/mine.html"><img src="img/return.png"></a>
+			<span>升级会员</span>
+			<span class="h_topUp"><a href="recharge.html">充值</a></span>
+		</div>
+	<!-- 会员说明 -->
+		<div class="h_Member">
+			<div class="h_grade">
+				<p>会员等级说明：<br />
+					文字说明文字说明文字说明
+				</p>
+			</div>
+			<!-- VIP会员 -->
+			<div class="h_vipTe">
+				<div class="div1"></div>
+				<div class="xj_textVip">
+					<p>VIP会员</p>
+					<span>1.文字说明</span><br />
+					<span>2.文字说明</span><br />
+					<span>3.文字说明</span>
+				</div>
+				<div class="div2"></div>
+			</div>
+			<!-- 股东会员 -->
+			<div class="h_vipTe">
+				<div class="div1"></div>
+				<div class="xj_textVip">
+					<p>股东会员</p>
+					<span>1.文字说明</span><br />
+					<span>2.文字说明</span><br />
+					<span>3.文字说明</span>
+				</div>
+				<div class="div2"></div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</html>

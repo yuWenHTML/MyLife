@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.container {
+    width: 7.5rem;
+    margin: 0 auto;
+    position: relative;
+}
+.header {
+    height: 0.8rem;
+    line-height: 0.8rem;
+    width: 100%;
+    background-color: #f29004;
+    text-align: center;
+    color: #fff;
+    font-size: 0.36rem;
+}
+.header img {
+    float: left;
+    padding-left: 0.2rem;
+    padding-top: 0.2rem;
+    width: 0.2rem;
+    height: 0.4rem;
+}
+.header span {
+    margin-left: -0.3rem;
+}
+input {
+    border: 0;
+    outline: none;
+}
+
+/*头部*/
+.info li {
+    font-size: 0.3rem;
+    line-height: 0.8rem;
+    text-indent: 0.2rem;
+}
+.space {
+    height: 0.2rem;
+    background-color: #f2f2f2;
+}
+.detailed {
+    padding: 0.25rem 0.2rem;
+}
+.lf {
+    float: left;
+}
+.rg {
+    float: right;
+}
+.detailed li {
+    padding: 0.2rem 0.0rem;
+    border-bottom: 0.01rem solid #ccc;
+}
+.detailed li span {
+    font-size: 0.28rem;
+}
+.clear {
+    overflow: hidden;
+}
+.goodImg {
+    width: 1.4rem;
+    height: 1.4rem;
+    background: url("img/nut.png") 0 0 no-repeat;
+    background-size: 100%;
+}
+.goods_inst {
+    margin-left: 0.2rem;
+    width: 73%;
+}
+.goods_inst p {
+    font-size: 0.3rem;
+    padding-bottom: 0.2rem;
+}
+.goods_inst span {
+    font-size: 0.26rem;
+}
+.detailed input {
+    height: 0.5rem;
+    border: none;
+    margin-left: 0.2rem;
+    width: 75%;
+}
+#can_reason .can_top {
+    line-height: 0.65rem;
+    height: 0.65rem;
+    background-color: #f2f2f2;
+}
+#can_reason .can_top span {
+    font-size: 0.3rem;
+    color: #999999;
+}
+#can_reason .can_top img {
+    padding-right: 0.35rem;
+    padding-top: 0.2rem;
+    width: 0.2rem;
+}
+.cancel_del .cancel_data li {
+    padding: 0.3rem 0;
+    height: 0.55rem;
+}
+.cancel_del .cancel_data li span {
+    margin-top: 0.1rem;
+    color: #333333;
+    font-size: 0.3rem;
+}
+.cancel_del .cancel_data li input {
+    display: block;
+    height: 0.55rem;
+    font-size: 0.3rem;
+    margin-left: 0.2rem;
+    width: 2.2rem;
+}
+.cancel_del .cancel_data li #btn {
+    width: 0.55rem;
+    height: 0.62rem;
+    background: url("img/v1.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    position: relative;
+    outline: none;
+}
+.cancel_del .cancel_data li #btn .t_re {
+    width: 2.82rem;
+    height: 2.2rem;
+    position: absolute;
+    top: 0.63rem;
+    left: -2.25rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: none;
+}
+.cancel_del .cancel_data li #btn .t_re li {
+    padding: 0;
+    font-size: 0.26rem;
+    line-height: 0.52rem;
+}
+.cancel_del .cancel_data li .sendBtn {
+    margin-left: 0.2rem;
+    margin-top: 0.1rem;
+    font-size: 0.28rem;
+}
+.cancel_del .cancel_data li img {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+#submit {
+    width: 1.6rem;
+    height: 0.55rem;
+    background: url("img/button.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    text-align: center;
+    border: none;
+}
+.footer p {
+    font-size: 0.28rem;
+}
+.footer button {
+    width: 6.4rem;
+    height: 0.9rem;
+    background: url("img/button4.png") 0 0 no-repeat;
+    background-size: 100%;
+    color: #fff;
+    font-size: 0.34rem;
+    line-height: 0.9rem;
+    text-align: center;
+    border: none;
+}
+.cancel {
+    font-size: 0.28rem;
+    display: inline-block;
+    width: 1.45rem;
+    height: 0.5rem;
+    border-radius: 0.06rem;
+    border: 0.01rem solid #999999;
+    color: #b8b8b8;
+    margin-right: 0.3rem;
+    line-height: 0.5rem;
+    text-align: center;
+    margin-top: -0.08rem;
+    cursor: pointer;
+}
+#mask {
+    width: 7.5rem;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #ccc;
+    opacity: 0.5;
+}
+#can_reason {
+    position: absolute;
+    left: 0.35rem;
+    top: 1.45rem;
+    width: 6.55rem;
+    height: 7.8rem;
+    background-color: #fff;
+    padding: 0.25rem 0.2rem;
+}
+        </style>
+    <title>去评价</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <header class="header">
+            <a href="index.html">
+                <img src="img/return.png">
+            </a>
+            <span>订单详情</span>
+        </header>
+        <!-- main -->
+        <div class="main">
+            <div class="info">
+                <ul>
+                    <li>刘晓心 13562024158</li>
+                    <li>广州市天河区东圃时代TIT广场</li>
+                </ul>
+            </div>
+            <div class="space"></div>
+            <div class="detailed">
+                <ul>
+                    <li class="clear"><span class="lf">购买商品</span><span class="rg">待评价</span><span class="cancel rg" id="cancel">申请退货</span></li>
+                    <li class="clear">
+                        <div class="goodImg lf"></div>
+                        <div class="goods_inst lf">
+                            <p>坚果特产山核桃奶油味碧根...</p>
+                            <p style="color: #dadada;font-size: 0.26rem">规格：1盒6片</p>
+                            <div>
+                                <h2 class="lf" style="color: red;font-size: 0.26rem">￥ 29.5</h2><span class="rg">x 2</span></div>
+                        </div>
+                    </li>
+                    <li class="clear">
+                        <span class="lf">运费：</span>
+                        <span class="rg">￥ 10</span>
+                    </li>
+                    <li class="clear">
+                        <span class="lf">备注:</span>
+                        <input class="lf" type="text" placeholder="请输入" style="font-size: 0.28rem;margin-top: -0.06rem">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="space"></div>
+        <div class="footer detailed">
+            <ul>
+                <li>
+                    <p>订单详情</p>
+                </li>
+                <li style="border-bottom: none">
+                    <p>订单编号： SKYJ12525441 </p>
+                    <p>创建时间：2015-10-02 12_20</p>
+                    <p>付款时间：2015-10-02 12:36</p>
+                    <p>物流信息：申通物流 5221255142</p>
+                    <p>收货时间：2015-10-02 12:36</p>
+                    <div style="height: 0.5rem"></div>
+                </li>
+            </ul>
+            <div style="text-align: center;">
+                <a href="evaluate.html"><button>去评价</button></a>
+            </div>
+        </div>
+        <div id="mask" style="display: none"></div>
+        <div id="can_reason" style="display: none">
+            <div class="can_top">
+                <span class="lf">申请退款</span>
+                <img src="img/close.png" class="rg" id="close">
+            </div>
+            <div class="cancel_del">
+                <ul class="cancel_data">
+                    <li><span class="lf">退货原因* ：</span>
+                        <input type="text" placeholder="请选择退货理由" class="lf" id="ipt"><span class="rg" style="font-size: 0.22rem">*选项必选</span>
+                        <button class="lf" id="btn">
+                            <ul class="t_re" id="t_re">
+                                <li>收到商品破损</li>
+                                <li>商品发错</li>
+                                <li>商品描述不符</li>
+                                <li>商品质量文体</li>
+                            </ul>
+                        </button>
+                    </li>
+                    <li><span class="lf">退款金额*：￥55</span></li>
+                    <li><span class="lf">退款说明：</span>
+                        <input type="text" class="lf" style="width: 70%;">
+                    </li>
+                    <li><span class="lf">上传凭证：</span>
+                        <button class="lf sendBtn">要上传的照片</button>
+                    </li>
+                    <li><img src="img/yi.png"><img src="img/yi2.png" style="margin-left: 0.2rem;"></li>
+                </ul>
+                <a href="Yw-Order.html"><button id="submit">提交</button></a>
+            </div>
+        </div>
+        <!-- container -->
+    </div>
+</body>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+(function(doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function() {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            if (clientWidth >= 750) {
+                docEl.style.fontSize = '100px';
+            } else {
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+
+var mask = document.getElementById("mask")
+var can_reason = document.getElementById("can_reason")
+var close = document.getElementById("close")
+
+close.onclick = function() {
+    mask.style.display = "none"
+    can_reason.style.display = "none"
+}
+
+var $t_re = $("#t_re")
+var $btn = $("#btn")
+$btn.on("click",function(){
+    $t_re.toggle();
+})
+var submit = document.getElementById("submit")
+submit.onclick = function() {
+    mask.style.display = "none"
+    can_reason.style.display = "none"    
+}
+var cancel = document.getElementById("cancel")
+cancel.onclick = function(){
+    mask.style.display = "block"
+    can_reason.style.display = "block"
+}
+var ipt = document.getElementById("ipt")
+var lis = t_re.getElementsByTagName("li");
+for(var i = 0;i<lis.length;i++){
+    lis[i].index = i;
+    lis[i].onclick = function(){
+        ipt.value = lis[this.index].innerText;
+    }
+}
+</script>
+
+</html>

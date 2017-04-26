@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"    name="viewport">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>更多</title>
+	<link rel="stylesheet" type="text/css" href="css/h_mone.css">
+</head>
+<body>
+	<div class="mone_wrap">
+	<!-- 头部 -->
+		<div class="h_moneHade">
+			<a href="../home/mine.html"><img src="img/return.png"></a>
+			<span>更多</span>
+		</div>
+	<!-- 更多 -->
+	<div class="h_moneTab">
+		<ul>
+			<a href="aboutUs.html"><li class="h_moneBom">关于我们<img src="img/rig.png" class="right"></li></a>
+			<a href="h_help.html"><li class="h_moneBom">帮助中心<img src="img/rig.png" class="right"></li></a>
+			<a href="h_feedback.html"><li class="h_moneBom">建议反馈<img src="img/rig.png" class="right"></li></a>
+			<li>版本更新<span>5.02</span></li>
+		</ul>
+	</div>
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</html>

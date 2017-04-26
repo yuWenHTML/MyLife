@@ -1,0 +1,133 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+body,html,.h_collectWrap{
+	width: 100%;
+	height: 100%;
+	background-color: #f2f2f2;
+	font-family: "微软雅黑";
+	/*overflow: scroll;*/
+	overflow: hidden;
+}
+.h_collHade{
+	width: 100%;
+	height: 0.8rem;
+	background-color: #f29004;
+	font-size: 0.36rem;
+	text-align: center;
+	line-height: 0.8rem;
+	color: white;
+}
+.h_collHade img{
+	width: 0.2rem;
+	height: 0.35rem;
+	position: absolute;
+	left: 0.2rem;
+	top: 0.23rem;
+}
+.h_topUp{
+	position: absolute;
+	right: 0.3rem;
+}
+
+/*  */
+.h_bom{
+	border-bottom: 1px solid #dbdbdb;
+}
+
+.h_colllect{
+	width: 100%;
+	height: 3.83rem;
+	font-size: 0.3rem;
+	position: relative;
+}
+.h_colllect ul{
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	display: -webkit-box;
+	display: -ms-box;
+	display: -o-box;
+	display: -moz-box;
+	-webkit-box-orient: vertical;
+	-ms-box-orient: vertical;
+	-o-box-orient: vertical;
+	-moz-box-orient: vertical;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.h_colllect ul li{
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	-o-box-flex:1;
+	-ms-box-flex:1;
+	overflow: hidden;
+	padding-left: 0.2rem;
+	padding-right: 0.2rem;
+	padding-top: 0.2rem;
+	box-sizing: border-box;
+}
+.h_colllect ul li img{
+	width: 1.5rem;
+	height: 1.5rem;
+	float: left;
+}
+.h_colllect ul li span{
+	float: left;
+	margin-left: 0.2rem;
+	font-weight: bold;
+}
+.h_colllect ul li .h_price{
+	color: red;
+}
+
+/*编辑*/
+.h_colllect ul li .h_compXuan{
+	width: 0.35rem;
+	height: 0.35rem;
+	margin-right: 0.2rem;
+	margin-top: 0.55rem;
+}
+#h_compBg{
+	background-color: white;
+}
+
+.h_del{
+	width: 100%;
+	height: 1.11rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: #f2f2f2;
+	font-size: 0.32rem;
+	box-sizing: border-box;
+	padding: 0.2rem 0.2rem;
+}
+.h_del .h_check{
+	width: 0.35rem;
+	height: 0.35rem;
+	margin-top: 0.05rem;
+	float: left;
+}
+.h_del span{
+	margin-left: 0.2rem;
+}
+.h_del button{
+	width: 2.6rem;
+	height: 0.7rem;
+	background-color: #ee4147;
+	float: right;
+	border: 0;
+	outline: none;
+	border-radius: 0.15rem;
+	color: white;
+	font-size: 0.32rem;
+}

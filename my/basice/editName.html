@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"    name="viewport">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>修改姓名</title>
+	<link rel="stylesheet" type="text/css" href="css/h_basice.css">
+</head>
+<body>
+	<div class="bas_wrap">
+	<!-- 头部 -->
+		<div class="h_dasHade">
+			<a href="basice.html"><img src="img/return.png"></a>
+			<span>姓名</span>
+		</div>
+	<!-- 修改姓名 -->
+	<div class="editName">
+		<p class="h_nameP">
+			<input type="text" name="" placeholder="李晓晓" class="h_inputName">
+		</p>
+		<button class="h_button">确认</button>
+	</div>
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+	// 获取点击按钮
+	$btn = $(".h_button");
+	$ipt = $(".editName .h_nameP input");
+	$btn.click(function(){
+		// alert("修改成功")
+		if($ipt.val() ==""){
+			alert("请输入姓名！");
+		}else{
+			window.location.href="basice.html";
+		}
+		
+	})
+</script>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>我的订单</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			background: #f2f2f2;
+		}
+		input,button{
+			outline: none;
+		}
+		/*头部*/
+		.h_dasHade{
+			width: 100%;
+			height: 0.8rem;
+			background-color: #f29004;
+			font-size: 0.36rem;
+			text-align: center;
+			line-height: 0.8rem;
+			color: white;
+		}
+		.h_dasHade img{
+			width: 0.2rem;
+			height: 0.35rem;
+			position: absolute;
+			left: 0.2rem;
+			top: 0.2rem;
+		}
+		/*选择*/
+		.yw-center {
+			width: 7.5rem;
+			background: white;
+			height: 1.0rem;
+			font-size: 0.3rem;
+			margin: auto;
+		}
+		.yw-center ul{
+			overflow: hidden;
+			padding-top: 0.3rem;
+		}
+		.yw-center ul li{
+			margin-left: 0.4rem;
+			list-style: none;
+			float: left;
+		
+		}
+		/*订单*/
+		.yw-center-Img{
+			width: 7.5rem;
+			margin-top: 0.3rem;
+			background: white;
+			margin: auto;
+			margin-top: 0.2rem;
+		}
+		.yw-Img-Top{
+			overflow: hidden;
+			width: 6.6rem;
+			border-bottom: 1px solid gray;
+			margin-left: 0.4rem;
+			font-size: 0.25rem;
+			padding-top: 0.2rem;
+			padding-bottom: 0.2rem;
+		}
+		.yw-Img-Top span:nth-child(2){
+			color:#F29004;
+			float: right;
+		}
+		.yw-Img-center{
+			overflow: hidden;
+			width: 6.6rem;
+			padding-top: 0.4rem;
+			padding-bottom: 0.4rem;
+			margin-left: 0.4rem;
+			border-bottom: 1px solid gray;
+		}
+		.yw-Img-center .yw-img1{
+			float: left;
+			width: 1.44rem;
+			height: 1.36rem;
+		}
+		.yw-Img-center .yw-Img-span1{
+			display: inline-block;
+			width: 4rem;
+			font-size: 0.3rem;
+			float: left;
+			margin-left: 0.2rem;
+			margin-top: 0.1rem;
+			color: black;
+		}
+		.yw-Img-center .yw-Img-span2{
+			display: inline-block;
+			width: 4.8rem;
+			float: left;
+			font-size: 0.3rem;
+			color: gray;
+			margin-left: 0.2rem;
+			margin-top: 0.1rem;
+		}
+		.yw-Img-center .yw-Img-span3{
+			float: right;
+			font-size: 0.3rem;
+			color: black;
+		}
+		.yw-Img-bottom{
+			padding-bottom: 0.2rem;
+			padding-top: 0.2rem;
+			border-bottom: 1px solid gray;
+		}
+		.yw-Img-bottom p{
+			line-height: 0.2rem;
+			color: #757575;
+			/*width: 6.6rem;*/
+			margin-left: .4rem;
+			font-size: 0.3rem;
+		}
+		.yw-Img-bottom p button:nth-child(1){
+			margin-left: 0.6rem;
+			/*outline: none;*/
+			border: none;
+			background-color: white;
+			border-radius: 5px;
+			border: 1px solid #999999;
+			width: 1.71rem;
+			height: 0.63rem;
+			font-size: 0.3rem;
+		}
+		.yw-Img-bottom p button:nth-child(2){
+			/*outline: none;*/
+			border: none;
+			background-color: white;
+			border-radius: 5px;
+			border: 1px solid #F29106;
+			color: #F29106;
+			width: 1.71rem;
+			height: 0.63rem;
+			font-size: 0.3rem;
+		}
+		.bottomLi{
+			padding-bottom: 0.3rem;
+			border-bottom: 1px solid #F29004;		
+			border-width: 0.05rem;
+		}
+		a{
+			text-decoration: none;
+			color: #f39715;
+		}
+	</style>
+</head>
+<body>
+	<div class="yw-Wrap">
+		<div class="h_dasHade">
+			<a href="../home/mine.html"><img src="img/return.png"></a>
+			<span>我的订单</span>
+		</div>
+		<div class="yw-center">
+			<ul>
+				<li class="bottomLi">待付款</li>
+				<li>待发货</li>
+				<li>待收货</li>
+				<li>已完成</li>
+				<li>退货/售后</li>
+			</ul>
+		</div>
+
+		<div class="yw-display1">
+			<div class="yw-center-Img">
+				<div class="yw-Img-Top">
+					<span>订单编号:SHYJ12552</span>
+					<span>待付款</span>
+				</div>
+				<div class="yw-Img-center">
+					<img src="img/nut.png" class="yw-img1" alt="">
+					<span class="yw-Img-span1">山果特产仙核桃奶油味</span>
+					<span class="yw-Img-span2">￥29.5</span>
+					<span class="yw-Img-span3">x 2</span>
+				</div>
+				<div class="yw-Img-bottom">
+					<p>共2件 合计：￥13
+					<button>取消订单</button>
+					<button><a href="daifukuang.html">立即付款</a></button>
+					</p>
+				</div>
+			</div>
+			<div class="yw-center-Img">
+				<div class="yw-Img-Top">
+					<span>订单编号:SHYJ12552</span>
+					<span>待付款</span>
+				</div>
+				<div class="yw-Img-center">
+					<img src="img/nut.png" class="yw-img1" alt="">
+					<span class="yw-Img-span1">山果特产仙核桃奶油味</span>
+					<span class="yw-Img-span2">￥29.5</span>
+					<span class="yw-Img-span3">x 2</span>
+				</div>
+				<div class="yw-Img-bottom">
+					<p>共2件 合计：￥13
+					<button>取消订单</button>
+					<button><a href="daifukuang.html">立即付款</a></button>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="yw-display1" style="display:none">
+			<div class="yw-center-Img">
+				<div class="yw-Img-Top">
+					<span>订单编号:SHYJ12552</span>
+					<span>待发货</span>
+				</div>
+				<div class="yw-Img-center">
+					<a href="dafahuo.html">
+					<img src="img/nut.png" class="yw-img1" alt="">
+					<span class="yw-Img-span1">山果特产仙核桃奶油味</span>
+					<span class="yw-Img-span2">￥29.5</span>
+					<span class="yw-Img-span3">x 2</span>
+					</a>
+				</div>
+				<div class="yw-Img-bottom">
+					<p>共2件 合计：￥13</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="yw-display1" style="display:none">
+			<div class="yw-center-Img">
+				<div class="yw-Img-Top">
+					<span>订单编号:SHYJ12552</span>
+					<span>待收货</span>
+				</div>
+				<a href="daishouhuo.html">
+				<div class="yw-Img-center">
+					<img src="img/nut.png" class="yw-img1" alt="">
+					<span class="yw-Img-span1">山果特产仙核桃奶油味</span>
+					<span class="yw-Img-span2">￥29.5</span>
+					<span class="yw-Img-span3">x 2</span>
+				</div>
+				</a>
+				<div class="yw-Img-bottom">
+					<p>共2件 合计：￥13
+					<!-- <button></button> -->
+					<button style="margin-left:2.4rem;border: 1px solid #F29106;color:#F29106"><a href="qupingjia.html">确认收货</a></button>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="yw-display1" style="display:none">
+			<div class="yw-center-Img">
+				<div class="yw-Img-Top">
+					<span>订单编号:SHYJ12552</span>
+					<span>待评价</span>
+				</div>
+				<div class="yw-Img-center">
+					<img src="img/nut.png" class="yw-img1" alt="">
+					<span class="yw-Img-span1">山果特产仙核桃奶油味</span>
+					<span class="yw-Img-span2">￥29.5</span>
+					<span class="yw-Img-span3">x 2</span>
+				</div>
+				<div class="yw-Img-bottom">
+					<p>共2件 合计：￥13
+					<button>删除</button>
+					<button class="evaluate">去评价</button>
+					</p>
+				</div>
+			</div>
+			<div class="yw-center-Img">
+				<div class="yw-Img-Top">
+					<span>订单编号:SHYJ12552</span>
+					<span style="color:black">已完成</span>
+				</div>
+				<div class="yw-Img-center">
+					<img src="img/nut.png" class="yw-img1" alt="">
+					<span class="yw-Img-span1">山果特产仙核桃奶油味</span>
+					<span class="yw-Img-span2">￥29.5</span>
+					<span class="yw-Img-span3">x 2</span>
+				</div>
+				<div class="yw-Img-bottom">
+					<p>共2件 合计：￥13
+					<button>删除</button>
+					<button style="border: 1px solid gray;color:black">已评价</button>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="yw-display1" style="display:none">
+			<div class="yw-center-Img">
+				<div class="yw-Img-Top">
+					<span>订单编号:SHYJ12552</span>
+					<span>退货中</span>
+				</div>
+				<div class="yw-Img-center">
+					<img src="img/nut.png" class="yw-img1" alt="">
+					<span class="yw-Img-span1">山果特产仙核桃奶油味</span>
+					<span class="yw-Img-span2">￥29.5</span>
+					<span class="yw-Img-span3">x 2</span>
+				</div>
+				<div class="yw-Img-bottom">
+					<p>共2件 合计：￥13
+					<button style="margin-left:2.4rem;border: 1px solid #F29106;color:#F29106">删除</button>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+	(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+
+
+var $bottomLi = $(".yw-center ul li");
+var $display1 = $(".yw-display1")
+console.log($display1)
+console.log($bottomLi)
+$bottomLi.click(function(){
+	// console.log($(this).index())
+	// console.log($(this).parent().parent().siblings(".yw-display1"))
+	var index = $(this).index()
+	$(this).addClass("bottomLi").siblings().removeClass("bottomLi");
+	$display1.eq(index).css({
+		"display":"block"
+	})
+	$display1.eq(index).siblings(".yw-display1").css({
+		"display":"none"
+	})
+});
+
+	// 评论
+	//获取评论按钮
+	var $evaBtn = $(".evaluate");
+	$evaBtn.click(function(){
+		window.location.href="evaluate.html";
+	})
+</script>
+</html>

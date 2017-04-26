@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"    name="viewport">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>支付完成</title>
+	<link rel="stylesheet" type="text/css" href="css/shop.css">
+</head>
+<body>
+	<div class="h_collectWrap">
+	<!-- 头部 -->
+		<div class="h_collHade">
+			<a href="../my/home/mine.html"><img src="img/reu.png"></a>
+			<span>支付成功</span>
+		</div>
+	<!-- 详情 -->
+		<div class="h_paySuccess">
+			<div class="h_paySuccesImg">
+				<img src="img/succ.png">
+				<p>恭喜您已成功支付！</p>
+				<p>订单编号：SHYJ2015120022</p>
+			</div>
+		</div>
+		<a href="../index/index.html"><button class="h_btn">继续购物</button></a>
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</html>

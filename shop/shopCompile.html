@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"    name="viewport">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>购物车</title>
+	<link rel="stylesheet" type="text/css" href="css/shop.css">
+</head>
+<body>
+	<div class="h_collectWrap" id="h_compBg">
+	<!-- 头部 -->
+		<div class="h_collHade">
+			<span>购物车</span>
+			<span class="h_topUp"><a href="shopCart.html">完成</a></span>
+		</div>
+	<!-- 详情 -->
+		<div class="h_colllect">
+			<ul>
+				<li class="h_bom img_h">
+					<img src="img/pitch.png" class="h_compXuan">
+					<img src="img/jugp.png">
+					<p class="h_describeP">
+						坚果特产山核桃奶油味碧根...<br />
+						<span class="standard">规格：1盒6片</span><br />
+						<span class="price">￥29.5</span>
+						<img data-num="1" src="img/jian.png" class="h_jian">
+						<span class="number">2</span>
+						<img src="img/jia.png" class="h_jia">
+					</p>
+				</li>
+				<li class="img_h">
+					<img src="img/pit.png" class="h_compXuan">
+					<img src="img/jugp.png">
+					<p class="h_describeP">
+						坚果特产山核桃奶油味碧根...<br />
+						<span class="standard">规格：1盒6片</span><br />
+						<img data-num="2" src="img/jian.png" class="h_jian">
+						<span class="price">￥29.5</span>
+						<span class="number">1</span>
+						<img src="img/jia.png" class="h_jia">
+					</p>
+				</li>
+			</ul>
+		</div>
+		<!-- 删除 -->
+		<div class="h_del">
+			<span class="h_xuan">
+				<img src="img/pit.png" class="h_check">
+				<span class="h_xuan2">全选</span>
+			</span>
+			<button>删除</button>
+		</div>
+		<!-- 底部导航 -->
+			<!-- 底部导航 -->
+		<div class="h_nav">
+			<ul>
+				<li><a href="../index/index.html"><img src="img/index.png"><br />首页</a></li>
+				<li><a href="../great/vip.html"><img src="img/vip2.png"><br />会员</a></li>
+				<li><a href="../classify/classify_index.html"><img src="img/Grid.png"><br />分类</a></li>
+				<li class="h_li"><a href="shopCart.html"><img src="img/shop.png" class="shop"><br />购物车</a></li>
+				<li><a href="../login/ywSign.html"><img src="img/my.png" class="my"><br />我的</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+	//获取列表
+	$lis = $(".h_colllect ul li");
+	//获取按钮
+	$liImgs = $(".h_colllect ul li .h_compXuan")
+	//获取全选按钮
+	$btnImg = $(".h_del img");
+	$btnQuan = $(".h_del .h_xuan2");
+
+	$liImgs.click(function(){
+		if($(this).attr("src") =="img/pitch.png"){
+			$(this).attr("src","img/pit.png");
+		}else{
+			$(this).attr("src","img/pitch.png");
+		}
+	})
+	$btnQuan.click(function(){
+		if($btnImg.attr("src") == "img/pit.png"){
+			for(var i = 0; i<$liImgs.length; i++){
+				$liImgs.eq(i).attr("src","img/pitch.png");
+			}
+			$btnImg.attr("src","img/pitch.png");
+			$btnQuan.text("全不选");
+		}else{
+			for(var j = 0; j<$liImgs.length; j++){
+				$liImgs.eq(j).attr("src","img/pit.png");
+			}
+			$btnImg.attr("src","img/pit.png");
+			$btnQuan.text("全选");
+		}
+	})
+
+	// 编辑
+	//获取
+	var $span = $(".h_colllect .img_h .number");
+	var $jian = $(".h_colllect .img_h .h_jian");
+	var $jia = $(".h_colllect .img_h .h_jia");
+
+	$jian.click(function(){
+		var span = $(this).parent().find($span);
+		var index = parseInt($(this).parent().find($span).text());
+		index--;
+		if(index < 0){
+			span.text("0");
+		}else{
+			span.text(index);
+		}
+	})
+	$jia.click(function(){
+		var span = $(this).parent().find($span);
+		var index = parseInt($(this).parent().find($span).text());
+		index++;
+		if(index < 0){
+			span.text("0");
+		}else{
+			span.text(index);
+		}
+		
+	})
+</script>
+</html>

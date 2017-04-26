@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"    name="viewport">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>帮助中心</title>
+	<link rel="stylesheet" type="text/css" href="css/h_mone.css">
+</head>
+<body>
+	<div class="mone_wrap">
+	<!-- 头部 -->
+		<div class="h_moneHade">
+			<a href="h_mone.html"><img src="img/return.png"></a>
+			<span>帮助中心</span>
+		</div>
+
+	<!-- 客服 -->
+		<div class="h_service">
+			<div class="h_helpTel">
+				<img src="img/iconfonte.png" class="h_helpTo">
+				<p>
+					周一至周五 8:00-6:00<br />
+					<b>4000-8888-08</b>
+				</p>
+				<img src="img/tel.png" class="dial">
+			</div>
+		</div>
+
+	<!-- 更多帮助 -->
+	<p class="issue">常见问题</p>
+	<div class="h_moneTab2">
+		<ul>
+			<a href="h_issue.html"><li class="h_moneBom">1.如何修改收货地址<img src="img/rig.png" class="right"></li></a>
+			<a href="h_issue.html"><li class="h_moneBom">2.如何修改密码<img src="img/rig.png" class="right"></li></a>
+			<a href="h_issue.html"><li class="h_moneBom">3.如何退款<img src="img/rig.png" class="right"></li></a>
+		</ul>
+	</div>
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</html>

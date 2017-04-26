@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"    name="viewport">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>基本资料</title>
+	<link rel="stylesheet" type="text/css" href="css/h_basice.css">
+</head>
+<body>
+	<div class="bas_wrap">
+	<!-- 头部 -->
+		<div class="h_dasHade">
+			<a href="../home/mine.html"><img src="img/return.png"></a>
+			<span>基本资料</span>
+		</div>
+	<!-- 基本资料 -->
+	<div class="bas_data">
+		<div class="h_portrait"><a href="###">头像<img src="img/hand_nv.png" class="h_hadePor"><img src="img/right.png" class="right"></a></div>
+		<ul>
+			<a href="editName.html"><li class="bom">姓名<span>李晓晓</span><img src="img/right.png" class="right"></li></a>
+			<li class="bom"><a href="###">会员标志<img src="img/diam.png" class="diam"></a></li>
+			<a href="contact.html"><li>联系方式<span>136****1245</span><img src="img/right.png" class="right"></li></a>
+		</ul>
+	</div>
+	<!-- 修改密码 -->
+	<div class="h_modie">
+		<ul>
+			<a href="changePwd.html"><li class="bom">修改密码<img src="img/right.png" class="right"></li></a>
+			<a href="monayPwd.html"><li class="bom">修改钱包密码<img src="img/right.png" class="right"></li></a>
+			<a href="supply.html"><li>我能供应<img src="img/right.png" class="right"></li></a>
+		</ul>
+	</div>
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</html>

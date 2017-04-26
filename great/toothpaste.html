@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>生活家居</title>
+    <link rel="stylesheet" type="text/css" href="css/housdatails.css">
+</head>
+
+<body>
+    <div id="vipDwrap">
+        <header>
+            <a href="cccthing.html"><img src="images/fanhui.png" alt="" class="vipDwrap1" /></a>
+            <a href="###"><img src="images/collect.png" alt="" class="vipDwrap2" /></a>
+            <a href="###"><img src="images/fx.png" alt="" class="vipDwrap3" /></a>
+        </header>
+        <div class="vipDCon">
+            <img src="images/ccctooth.png" alt="" />
+            <p>舒客牙膏爽清清火防蛀   超值4支装 </p>
+            <p><span>￥ 11.5</span><span><del>原价：¥ 12.8 </del></span><span>销量：1235</span></p>
+            <p><span>限时：2天23分02秒</span><span>限量：120件</span></p>
+        </div>
+        <!-- 商品详情和评论 -->
+        <div class="vipTab">
+            <div class="inner">
+                <ul>
+                    <li class="select"><a href="###">商品详情</a></li>
+                    <li><a href="###">用户评价</a></li>
+                </ul>
+            </div>
+            <div class="vipTabC">
+                <div class="vipTabC1" style="display:block">
+                    <img src="images/guanggao1.png" alt="" />
+                </div>
+                <div class="vipTabC1" style="display:none">
+                    <ul>
+                        <li>
+                            <p><span>小球</span><span>2015-10-09</span></p>
+                            <p>好用，喜欢。</p>
+                        </li>
+                        <li>
+                            <p><span>小球</span><span>2015-10-09</span></p>
+                            <p>好用，喜欢。</p>
+                        </li>
+                        <li>
+                            <p><span>小球</span><span>2015-10-09</span></p>
+                            <p>好用，喜欢。</p>
+                        </li>
+                        <li>
+                            <p><span>小球</span><span>2015-10-09</span></p>
+                            <p>好用，喜欢。</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 加入购物车 立即购买-->
+        <div class="vipShop">
+            <a href="../shop/shopCart.html"><img src="images/shop.png" alt="" class="vipShopImg1" /></a>
+            <a href="###"><img src="images/addshop.png" alt="" class="vipShopImg2" /></a>
+            <a href="../shop/confirmOrder.html"><img src="images/buy.png" alt="" class="vipShopImg3" /></a>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/rem.js"></script>
+<script type="text/javascript">
+// tab切换部分的代码
+var lis = document.querySelectorAll(".inner li");
+var cons = document.querySelectorAll(".vipTabC div");
+
+for (var i = 0; i < lis.length; i++) {
+    lis[i].index = i;
+    lis[i].onclick = function() {
+        for (var j = 0; j < lis.length; j++) {
+            lis[j].className = "";
+            cons[j].style.display = "none"
+        }
+        this.className = "select";
+        cons[this.index].style.display = "block";
+    }
+}
+</script>
+
+</html>

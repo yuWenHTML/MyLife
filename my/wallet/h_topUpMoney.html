@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"    name="viewport">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>充值</title>
+	<link rel="stylesheet" type="text/css" href="css/h_myMoney.css">
+</head>
+<body>
+	<div class="money_wrap">
+	<!-- 头部 -->
+		<div class="h_monHade">
+			<a href="h_myMoney.html"><img src="img/return.png"></a>
+			<span>充值</span>
+		</div>
+	<!-- 支付 -->
+		<div class="h_topUpmon">
+			<ul>
+				<li class="h_bom"><img src="img/zhifu.png" class="h_zhifu"><span>支付宝</li>
+				<li><span class="h_jin">金额</span><input style="font-size:0.3rem"  type="text" name="" placeholder="请输入充值金额"></li>
+			</ul>
+		</div>
+	<!-- 确定 -->
+		<div class="h_btnC">
+			<button class="h_moneydBtn">下一步</button>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</html>

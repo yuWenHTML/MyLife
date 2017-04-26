@@ -1,0 +1,543 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: #828282;
+}
+ul,li{
+	list-style: none;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.bas_wrap{
+	width: 100%;
+	height: 100%;
+	background-color: #f2f2f2;
+	font-family: "微软雅黑";
+	/*overflow: scroll;*/
+	position: relative;
+	
+}
+/*头部*/
+.h_dasHade{
+	width: 100%;
+	height: 0.8rem;
+	background-color: #f29004;
+	font-size: 0.36rem;
+	text-align: center;
+	line-height: 0.8rem;
+	color: white;
+	margin-bottom: 0.2rem;
+}
+.h_dasHade img{
+	width: 0.2rem;
+	height: 0.35rem;
+	position: absolute;
+	left: 0.2rem;
+	top: 0.23rem;
+}
+
+/*头像*/
+.bas_data{
+	width: 100%;
+	height: 4.2rem;
+	background-color: white;
+	font-size: 0.3rem;
+	border-bottom: 1px solid #cccccc;
+}
+.h_portrait{
+	width: 100%;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	border-bottom: 1px solid #cccccc;
+	padding-left: 0.2rem;
+	position: relative;
+}
+.h_portrait .h_hadePor{
+	width: 1.15rem;
+	height: 1.15rem;
+	position: absolute;
+	top: 0.2rem;
+	right: 0.9rem;
+}
+.h_portrait .right{
+	width: 0.2rem;
+	height: 0.4rem;
+	position: absolute;
+	right: 0.5rem;
+	top: 0.6rem;
+}
+/*基本资料*/
+.bas_data ul{
+	width: 100%;
+	height: 2.72rem;
+	/*background-color: red;*/
+	display: -webkit-box;
+	display: -ms-box;
+	display: -o-box;
+	display: -moz-box;
+	-webkit-box-orient: vertical;
+	-ms-box-orient: vertical;
+	-o-box-orient: vertical;
+	-moz-box-orient: vertical;
+}
+.bas_data ul li{
+	line-height: 0.9rem;
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	-o-box-flex:1;
+	-ms-box-flex:1;
+	position: relative;
+	padding-left: 0.2rem;
+}
+.bas_data ul li span{
+	position: absolute;
+	right: 0.6rem;
+}
+.bas_data ul li .right{
+	width: 0.2rem;
+	height: 0.4rem;
+	position: absolute;
+	right: 0.3rem;
+	top: 0.25rem;
+}
+.bas_data ul li .diam{
+	width: 0.5rem;
+	height: 0.40rem;
+	position: absolute;
+	right: 0.3rem;
+	top: 0.25rem;
+}
+.bom{
+	border-bottom: 1px solid #cccccc;
+}
+/*修改*/
+.h_modie{
+	width: 100%;
+	height: 2.74rem;
+	background-color: white;
+	font-size: 0.3rem;
+	margin-top: 0.2rem;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+
+}
+.h_modie ul{
+	width: 100%;
+	height: 2.72rem;
+	/*background-color: red;*/
+	display: -webkit-box;
+	display: -ms-box;
+	display: -o-box;
+	display: -moz-box;
+	-webkit-box-orient: vertical;
+	-ms-box-orient: vertical;
+	-o-box-orient: vertical;
+	-moz-box-orient: vertical;
+}
+.h_modie ul li{
+	line-height: 0.9rem;
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	-o-box-flex:1;
+	-ms-box-flex:1;
+	position: relative;
+	padding-left: 0.2rem;
+}
+.h_modie ul li span{
+	position: absolute;
+	right: 0.6rem;
+}
+.h_modie ul li .right{
+	width: 0.2rem;
+	height: 0.4rem;
+	position: absolute;
+	right: 0.3rem;
+	top: 0.25rem;
+}
+.h_modie ul li .diam{
+	width: 0.5rem;
+	height: 0.40rem;
+	position: absolute;
+	right: 0.3rem;
+	top: 0.25rem;
+}
+
+/*修改姓名*/
+.editName{
+	width: 100%;
+	font-size: 0.3rem;
+	/*overflow: hidden;*/
+}
+.h_input{
+	width: 7.11rem;
+	height: 0.91rem;
+	border-radius: 0.2rem;
+	border:1px solid #ccc;
+	font-size: 0.3rem;
+	outline: none;
+	padding-left: 0.4rem;
+	box-sizing: border-box;
+	margin: auto;
+}
+.h_button{
+	/*margin-top: 1.67rem;*/
+	width: 6.41rem;
+	height: 0.91rem;
+	background-color: #f29004;
+	color: white;
+	border: 0;
+	font-size: 0.32rem;
+	border-radius: 0.2rem;
+	outline: none;
+	letter-spacing: 0.2rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+/*联系方式*/
+
+.h_compile{
+	position: absolute;
+	right: 0.3rem;
+}
+.h_compile a{
+	color: white;
+}
+.h_inputName{
+	width: 6rem;
+	height: 0.80rem;
+	/*margin-left: 0.3rem;*/
+	border: 0;
+	outline: none;
+	font-size: 0.3rem;
+}
+.h_nameP{
+	width: 7.11rem;
+	height: 0.94rem;
+	padding-left: 0.2rem;
+	box-sizing: border-box;
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 0.15rem;
+	color: #888;
+	margin: auto;
+}
+/*修改联系方式*/
+.h_textTel{
+	width: 100%;
+	/*height: 15.0rem;*/
+	/*position: relative;*/
+	/*text-align: center;*/
+}
+.h_textTel ul{
+	width: 7.11rem;
+	height: 2.0rem;
+	color: #888;
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 0.15rem;
+	margin: auto;
+	margin-top: 0.3rem;
+	display: -webkit-box;
+	display: -ms-box;
+	display: -o-box;
+	display: -moz-box;
+	-webkit-box-orient: vertical;
+	-ms-box-orient: vertical;
+	-o-box-orient: vertical;
+	-moz-box-orient: vertical;
+}
+.h_textTel ul li{
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	-o-box-flex:1;
+	-ms-box-flex:1;
+	padding: 0.2rem;
+	box-sizing: border-box;
+}
+.h_textTel ul li img{
+	width: 2.0rem;
+	height: 0.7rem;
+	float: right;
+}
+.h_textTel ul li input{
+	/*margin-left: 0.3rem;*/
+	border: 0;
+	width: 4.5rem;
+	height: 0.50rem;
+	outline: none;
+	font-size: 0.3rem;
+	float: left;
+}
+.h_buttonName{
+	width: 6.41rem;
+	height: 0.91rem;
+	background-color: #f29004;
+	color: white;
+	border: 0;
+	font-size: 0.32rem;
+	border-radius: 0.2rem;
+	outline: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+/*修改密码：*/
+.h_pdwupdel{
+	width: 100%;
+	height: 2.0rem;
+	/*text-align: center;*/
+	/*position: relative;*/
+	font-size: 0.3rem;
+}
+.h_pdwupdel p{
+	width: 7.11rem;
+	height: 0.94rem;
+	padding-left: 0.2rem;
+	box-sizing: border-box;
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 0.15rem;
+	color: #888;
+	margin: auto;
+}
+.h_pdw{
+	margin-left: 0.3rem;
+	border: 0;
+	width: 5rem;
+	height: 0.80rem;
+	outline: none;
+	font-size: 0.3rem;
+}
+.h_pdwupdel ul{
+	width: 7.11rem;
+	height: 2.0rem;
+	color: #888;
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 0.15rem;
+	margin: auto;
+	margin-top: 0.3rem;
+	display: -webkit-box;
+	display: -ms-box;
+	display: -o-box;
+	display: -moz-box;
+	-webkit-box-orient: vertical;
+	-ms-box-orient: vertical;
+	-o-box-orient: vertical;
+	-moz-box-orient: vertical;
+}
+.h_pdwupdel ul li{
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	-o-box-flex:1;
+	-ms-box-flex:1;
+	padding: 0.2rem;
+	box-sizing: border-box;
+}
+.h_pdwupdel ul li input{
+	margin-left: 0.3rem;
+	border: 0;
+	width: 4.5rem;
+	height: 0.50rem;
+	outline: none;
+	font-size: 0.3rem;
+}
+.h_pdwupdel span{
+	display: block;
+	color: #ccc;
+	margin: auto;
+	width: 7.11rem;
+	margin-top: 0.1rem;
+}
+.h_bompaw{
+	border-bottom: 1px solid #ccc;
+}
+.h_pdw_btn{
+	margin-top: 1.67rem;
+	width: 6.41rem;
+	height: 0.91rem;
+	background-color: #f29004;
+	color: white;
+	border: 0;
+	font-size: 0.32rem;
+	word-spacing: 0.2rem;
+	border-radius: 0.2rem;
+	outline: none;
+	letter-spacing: 0.2rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	top: 6rem;
+	margin: auto;
+}
+.h_chagPwd{
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
+.h_chagPwd span{
+	color: #ccc;
+	font-size: 0.24rem;
+}
+/*修改成功*/
+.h_updelSucc{
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: white;
+}
+.h_updelSucc2{
+	width: 1.3rem;
+	height: 0.5rem;
+	opacity: 1;
+	font-size: 0.3rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	background-color: green;
+	text-align: center;
+}
+
+
+
+/*修改钱包密码*/
+.h_moneyImg{
+	width: 100%;
+	height: 15.0rem;
+	font-size: 0.3rem;
+}
+.h_moneyImg ul{
+	width: 7.11rem;
+	height: 2.0rem;
+	color: #888;
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 0.15rem;
+	margin: auto;
+	margin-top: 0.3rem;
+	display: -webkit-box;
+	display: -ms-box;
+	display: -o-box;
+	display: -moz-box;
+	-webkit-box-orient: vertical;
+	-ms-box-orient: vertical;
+	-o-box-orient: vertical;
+	-moz-box-orient: vertical;
+}
+.h_moneyImg ul li{
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	-o-box-flex:1;
+	-ms-box-flex:1;
+	padding: 0.2rem;
+	box-sizing: border-box;
+}
+.h_moneyImg ul li img{
+	width: 2.0rem;
+	height: 0.7rem;
+	float: right;
+}
+.h_moneyImg ul li input{
+	/*margin-left: 0.3rem;*/
+	border: 0;
+	width: 4.5rem;
+	height: 0.50rem;
+	outline: none;
+	font-size: 0.3rem;
+	float: left;
+}
+
+/*我能供应*/
+.h_supplyLei{
+	width: 100%;
+	height: 2.0rem;
+	/*text-align: center;*/
+	/*position: relative;*/
+	font-size: 0.3rem;
+}
+.h_supplyLei p{
+	width: 7.11rem;
+	height: 0.94rem;
+	padding-left: 0.2rem;
+	box-sizing: border-box;
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 0.15rem;
+	color: #888;
+	margin: auto;
+	margin-bottom: 0.2rem;
+}
+.h_supply{
+	width: 7.11rem;
+	height: 1.85rem;
+	border-radius: 0.10rem;
+	border:1px solid #ccc;
+	font-size: 0.34rem;
+	outline: none;
+	padding-left: 0.4rem;
+	box-sizing: border-box;
+	padding-top: 0.2rem;
+	margin: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+.h_por{
+	width: 7.11rem;
+	height: 2.28rem;
+	font-size: 0.34rem;
+	padding-left: 0.2rem;
+	color: #808080;
+	margin: auto;
+	position: absolute;
+	top: 5rem;
+}
+.h_por img{
+	margin-top: 0.4rem;
+	width: 1.35rem;
+	height: 1.35rem;
+}
+.h_supp_btn{
+	margin-top: 1.67rem;
+	width: 6.41rem;
+	height: 0.91rem;
+	background-color: #f29004;
+	color: white;
+	border: 0;
+	font-size: 0.32rem;
+	word-spacing: 0.2rem;
+	border-radius: 0.2rem;
+	outline: none;
+	letter-spacing: 0.2rem;
+	position: absolute;
+	left: 0;
+	bottom: 0rem;
+	right: 0;
+	top: 6rem;
+	margin: auto;
+}
+.clear{
+	clear: both;
+}

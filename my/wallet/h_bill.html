@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"    name="viewport">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>账单</title>
+	<link rel="stylesheet" type="text/css" href="css/h_myMoney.css">
+</head>
+<body>
+	<div class="money_wrap">
+	<!-- 头部 -->
+		<div class="h_monHade">
+			<a href="h_myMoney.html"><img src="img/return.png"></a>
+			<span>账单</span>
+		</div>
+	<!-- 详情 -->
+		<div class="h_bill">
+			<p class="h_month">9月</p>
+			<ul>
+				<li class="h_bom">
+					<span>充值</span>
+					<span class="h_billRight">+100</span>
+					<p class="h_billtime">2015-10-15 14:45</p>
+				</li>
+				<li>
+					<span>消费</span>
+					<span class="h_billRight">-100</span>
+					<p class="h_billtime">2015-10-15 14:45</p>
+				</li>
+			</ul>
+			<p class="h_month">8月</p>
+			<ul>
+				<li class="h_bom">
+					<span>充值</span>
+					<span class="h_billRight">+100</span>
+					<p class="h_billtime">2015-10-15 14:45</p>
+				</li>
+				<li>
+					<span>消费</span>
+					<span class="h_billRight">-100</span>
+					<p class="h_billtime">2015-10-15 14:45</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</html>

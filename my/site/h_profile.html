@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"    name="viewport">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>收货地址</title>
+	<link rel="stylesheet" type="text/css" href="css/h_profile.css">
+</head>
+<body>
+	<div class="h_siteWrap">
+	<!-- 头部 -->
+		<div class="h_siteHade">
+			<a href="../home/mine.html"><img src="img/reu.png"></a>
+			<span>收货地址</span>
+		</div>
+		<!-- 地址 -->
+		<div class="h_profile">
+			<a href="h_address.html">
+			<img src="img/right.png">
+			<p>刘晓心<span class="h_proTel">13562021254</span></p>
+			<p><span class="h_default">[默认]</span>广州市天河区东圃时代TIT广场</p>
+			</a>
+		</div>
+		<div class="h_profile2">
+			<a href="h_address.html">
+			<img src="img/right.png">
+			<p>刘晓心<span class="h_proTel">13562021254</span></p>
+			<p>广州市天河区东圃时代TIT广场</p>
+			</a>
+		</div>
+		<!-- 新增地址 -->
+		<a href="h_address.html"><button class="h_stieBtn">新增收货地址</button></a>
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<script type="text/javascript">
+	
+</script>
+</html>

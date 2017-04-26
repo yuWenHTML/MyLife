@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"    name="viewport">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>确认下单</title>
+	<link rel="stylesheet" type="text/css" href="css/shop.css">
+</head>
+<body>
+	<div class="h_collectWrap">
+	<!-- 头部 -->
+		<div class="h_collHade">
+			<a href="shopCart.html"><img src="img/reu.png"></a>
+			<span>确认下单</span>
+			<!-- <span class="h_topUp"><a href="shopCart.html">完成</a></span> -->
+		</div>
+		<div class="h_site">
+			<p>刘晓心<span class="h_siteTel">13562021254</span></p>
+			<img src="img/rig.png">
+			<p class="h_siteDefault"><span class="h_default">[默认]</span>广州市天河区东圃时代TIT广场</p>
+		</div>
+	<!-- 详情 -->
+		<div class="h_commodityDetails">
+			<p class="purchase">购买商品</p>
+			<div class="product">
+				<img src="img/jugp.png">
+				<p>
+					坚果特产山核桃奶油味碧根...<br />
+					<span class="standard">规格：1盒6片</span><br />
+					<span class="price">￥29.5</span>
+					<span class="number">x2</span>
+				</p>
+			</div>
+			<p class="freight">运费：<span>￥10</span></p>
+			<p class="remark">备注：<input type="text"></p>
+		</div>
+	<!-- 支付方式 -->
+		<div class="h_modePayment">
+			<p class="h_mode">支付方式</p>
+			<p class="myWallet">
+			<img src="img/walle.png" class="walle">我的钱包<img src="img/pitch2.png" class="pitch2"></p>
+			<p class="alipay">
+			<img src="img/alipay.png" class="walle">支付宝<img src="img/pit.png" class="pitch2"></p>
+			<p class="weixin">
+			<img src="img/weixin.png" class="walle">微信支付
+			<img src="img/pit.png" class="pitch2"></p>
+		</div>
+	<!-- 支付 -->
+		<div class="h_pay">
+			<span>合计：<b>￥50</b></span>
+			<button>立即支付</button>
+		</div>
+
+		<!-- 支付密码 -->
+		<div class="h_patPwd">
+			<div class="password">
+				<p class="h_pwd">钱包密码</p>
+				<p class="h_money">￥55</p>
+				<p class="h_password">
+					<span><input type="password"></span>
+					<span><input type="password"></span>
+					<span><input type="password"></span>
+					<span><input type="password"></span>
+					<span><input type="password"></span>
+					<span class="borderR"><input type="password"></span>
+				</p>
+				<p class="h_button">
+					<input type="button" value="取消">
+					<input type="button" value="付款">
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+	//获取地址
+	var $h_site = $(".h_site");
+	$h_site.click(function(){
+		$(window).attr("location","h_profile.html");
+	})
+
+	//获取支付方式
+	var $imgsBtn = $(".h_modePayment .pitch2");
+
+	$imgsBtn.click(function(){
+		$imgsBtn.attr("src","img/pit.png");
+		$(this).attr("src","img/pitch2.png");
+	})
+
+	//获取支付按钮
+	var $payBtn = $(".h_pay button");
+	//获取支付页面
+	var $h_patPwd = $(".h_patPwd");
+	$payBtn.click(function(){
+		$h_patPwd.show();
+	})
+
+	// 获取 取消支付按钮
+	var $pwdBtn = $(".h_patPwd .password .h_button input");
+	//获取密码框
+	var $pwd = $(".h_patPwd .password .h_password span input")
+	$pwdBtn.eq(0).click(function(){
+		$h_patPwd.hide();
+	})
+	$pwdBtn.eq(1).click(function(){
+
+		for(var i = 0; i < $pwd.length; i++){
+			if($pwd.eq(i).val() ==""){
+				alert("密码不能为空，必须有6位数！");
+				return;
+			}
+			$(window).attr("location","shopCart.html");
+		}
+	})
+</script>
+</html>

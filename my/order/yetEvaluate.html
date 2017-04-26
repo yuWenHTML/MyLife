@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>评论</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body,.h_evaluateWrap{
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			font-family: "微软雅黑";
+		}
+		/*头部*/
+		.h_dasHade{
+			width: 100%;
+			height: 0.8rem;
+			background-color: #f29004;
+			font-size: 0.36rem;
+			text-align: center;
+			line-height: 0.8rem;
+			color: white;
+		}
+		.h_dasHade img{
+			width: 0.2rem;
+			height: 0.35rem;
+			position: absolute;
+			left: 0.2rem;
+			top: 0.2rem;
+		}
+		
+		.h_commodityP{
+			color: #666666;
+			width: 7.11rem;
+			height: 0.79rem;
+			font-size: 0.28rem;
+			border-bottom: 1px solid #ccc;
+			line-height: 0.79rem;
+			margin: auto;
+		}
+		.h_commodityDiv{
+			width: 7.11rem;
+			height: 1.9rem;
+			font-size: 0.32rem;
+			padding-top: 0.2rem;
+			/*padding-bottom: 0.2rem;*/
+			margin: auto;
+			box-sizing: border-box;
+			border-bottom: 1px solid #ccc;
+
+		}
+		.h_commodityDiv img{
+			width: 1.43rem;
+			height: 1.43rem;
+			float: left;
+		}
+		.h_describeP{
+			float: left;
+			margin-left: 0.2rem;
+			width: 5.37rem;
+		}
+		.h_describeP .standard{
+			color: #757575;
+			font-size: 0.28rem;
+		}
+		.h_describeP .price{
+			color: red;
+		}
+		.h_describeP .number{
+			float: right;
+		}
+		.h_ratingP{
+			width: 7.11rem;
+			color: #666666;
+			font-size: 0.3rem;
+			padding-top: 0.2rem;
+			padding-bottom: 0.2rem;
+			margin: auto;
+		}
+		.h_ratingP .h_rigImgs{
+			float: right;
+		}
+		.h_ratingP img{
+			width: 0.32rem;
+			height: 0.34rem;
+		}
+		.h_characterT{
+			width: 7.09rem;
+			height: 1.78rem;
+			/*border: 1px solid #ccc;*/
+			margin: auto;
+			font-size: 0.3rem;
+		}
+	/*	.h_characterT textarea{
+			width: 7.09rem;
+			height: 1.78rem;
+			outline: none;
+			border: 0;
+			background-color: #f2f2f2;
+			padding: 0.2rem;
+			box-sizing: border-box;
+		}*/
+		button{
+			width: 6.41rem;
+			height: 0.9rem;
+			background-color: #f29004;
+			color: white;
+			font-size: 0.32rem;
+			text-align: center;
+			border: 0;
+			outline: none;
+			margin: auto;
+			display: block;
+			border-radius: 0.15rem;
+			margin-top: 2rem;
+		}
+	</style>
+</head>
+<body>
+<div class="h_evaluateWrap">
+	<!-- 头部 -->
+	<div class="h_dasHade">
+		<a href="Yw-Order.html"><img src="img/return.png"></a>
+		<span>我的评价</span>
+	</div>
+	<!-- 购买的商品 -->
+	<p class="h_commodityP">购买商品</p>
+	<!-- 商品 -->
+	<div class="h_commodityDiv">
+		<img src="img/nut.png">
+		<p class="h_describeP">
+			坚果特产山核桃奶油味碧根...<br />
+			<span class="standard">规格：1盒6片</span><br />
+			<span class="price">￥29.5</span><span class="number">x2</span>
+		</p>
+	</div>
+	<!-- 评论 -->
+	<p class="h_ratingP">
+		<span>评论</span>
+		<span class="h_rigImgs">
+			<img data-num="0" src="img/STAR.png">
+			<img data-num="1" src="img/STAR.png">
+			<img data-num="2" src="img/STAR.png">
+			<img data-num="3" src="img/STAR.png">
+			<img data-num="4" src="img/STAR2.png">
+		</span>
+	</p>
+	<!-- 文字 -->
+	<div class="h_characterT">
+		好吃！
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>商品详情</title>
+		<link rel="stylesheet" type="text/css" href="css/classify_details.css" />
+	</head>
+
+	<body>
+		<img class="zz" src="img/zz.png" />
+
+		<div class="classify_wrap">
+			<div id="classify_inner">
+				<img src="img/foot1.jpg" />
+			</div>
+			<img class="zz2" src="img/zz2.png" />
+			<ul class="aniu">
+				<li><a href="classify_index.html"><img class="fh" src="img/fh.png" /></a></li>
+				<li><img class="sc" src="img/sc.png" /></li>
+				<li><img class="fx" src="img/fx.png" /></li>
+			</ul>
+			<div class="jiage">
+				<p>薯条点心面休闲零食五味园&nbsp;&nbsp;&nbsp;&nbsp;小包装500g</p>
+				<span>￥11.5</span><span>原价：￥12.8</span><span>销量：1235</span>
+				<hr width="92.5%" color=#E1E1E1 size=0.5/>
+				<span>限时：</span><strong id="day_show">0天</strong><strong id="hour_show">0时</strong><strong id="minute_show">0分</strong><strong id="second_show">0秒</strong>
+				<span>限量：120件</span>
+			</div>
+			<div style="height: 10px; background: #E1E1E1;"></div>
+			<div class="xqpj">
+				<a id="xq" href="###">商品详情<img id="xqX" src="img/xuanzhong.png"/></a>
+				<a id="pj" href="###">用户评价<img id="pjX" src="img/xuanzhong.png"/></a>
+			</div>
+			<div class="xq">
+				<img src="img/details.jpg" />
+				<img src="img/details.jpg" />
+				<img src="img/details.jpg" />
+				<img src="img/details.jpg" />
+				<img src="img/details.jpg" />
+			</div>
+			<div class="pj">
+				<ul>
+					<li>
+						<span>小球</span><img src="img/pj.png" /><span>2015-10-05</span>
+						<p>挺好吃的下次再买。</p>
+					</li>
+					<li>
+						<span>小球</span><img src="img/pj.png" /><span>2015-10-05</span>
+						<p>挺好吃的下次再买。</p>
+					</li>
+					<li>
+						<span>小球</span><img src="img/pj.png" /><span>2015-10-05</span>
+						<p>挺好吃的下次再买。</p>
+					</li>
+					<li>
+						<span>小球</span><img src="img/pj.png" /><span>2015-10-05</span>
+						<p>挺好吃的下次再买。</p>
+					</li>
+					<li>
+						<span>小球</span><img src="img/pj.png" /><span>2015-10-05</span>
+						<p>挺好吃的下次再买。</p>
+					</li>
+					<li>
+						<span>小球</span><img src="img/pj.png" /><span>2015-10-05</span>
+						<p>挺好吃的下次再买。</p>
+					</li>
+					<li>
+						<span>小球</span><img src="img/pj.png" /><span>2015-10-05</span>
+						<p>挺好吃的下次再买。</p>
+					</li>
+					<li>
+						<span>小球</span><img src="img/pj.png" /><span>2015-10-05</span>
+						<p>挺好吃的下次再买。</p>
+					</li>
+				</ul>
+			</div>
+			<div class="goumai">
+				<a href="../shop/shopCart.html"><img src="img/gwc.png" /></a>
+				<a href="../shop/shopCart.html">加入购物车</a>
+				<a href="../shop/confirmOrder.html">立即购买</a>
+			</div>
+
+		</div>
+	</body>
+	<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var intDiff = parseInt(785391); //倒计时总秒数量
+		function timer(intDiff) {
+			window.setInterval(function() {
+				var day = 0,
+					hour = 0,
+					minute = 0,
+					second = 0; //时间默认值        
+				if(intDiff > 0) {
+					day = Math.floor(intDiff / (60 * 60 * 24));
+					hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+					minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+					second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+				}
+				if(minute <= 9) minute = '0' + minute;
+				if(second <= 9) second = '0' + second;
+				$('#day_show').html(day + "天");
+				$('#hour_show').html('<s id="h"></s>' + hour + '时');
+				$('#minute_show').html('<s></s>' + minute + '分');
+				$('#second_show').html('<s></s>' + second + '秒');
+				intDiff--;
+			}, 1000);
+		}
+		$(function() {
+			timer(intDiff);
+		});
+		
+		$("#xq").click(function(){
+//			if($(".xq").css("display") == "block") {
+//				$(".xq").show();
+//			} else {
+//				$(".xq").hide();
+//			}
+			$(".xq").css({
+				"display":"block"
+			});
+			$(".pj").css({
+				"display":"none"
+			});
+			$("#xqX").css({
+				"display":"block"
+			});
+			$("#pjX").css({
+				"display":"none"
+			});
+		})
+		
+		$("#pj").click(function(){
+//			if($(".pj").css("display") == "block") {
+//				$(".pj").show();
+//			} else {
+//				$(".pj").hide();
+//			}
+			$(".xq").css({
+				"display":"none"
+			})
+			$(".pj").css({
+				"display":"block"
+			})
+			$("#xqX").css({
+				"display":"none"
+			});
+			$("#pjX").css({
+				"display":"block"
+			});
+});
+	</script>
+
+</html>

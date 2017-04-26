@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>登录</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		/*头部*/
+		.h_dasHade{
+			width: 100%;
+			height: 0.6rem;
+			background-color: #f29004;
+			font-size: 0.36rem;
+			text-align: center;
+			line-height: 0.6rem;
+			color: white;
+			margin-bottom: 0.2rem;
+		}
+		.h_dasHade img{
+			width: 0.2rem;
+			height: 0.35rem;
+			position: absolute;
+			left: 0.2rem;
+			top: 0.1rem;
+		}
+		.h_compile{
+			position: absolute;
+			right: 0.3rem;
+		}
+		a{
+			color: white;
+			text-decoration: none;
+		}
+		/*中间图片部分*/
+		.ywBottomImages{
+			position: relative;
+			height: 3.69rem;
+		}
+		.ywBottomImages img{
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin:auto;
+			width: 2rem;
+			height: 2.24rem;
+		}
+		/*中间输入部分*/
+		.ywInput{
+			height: 3.1rem;
+		}
+		.ywBack{
+			font-size: 0.3rem;
+			width: 5.7rem;
+			height: 0.9rem;
+			margin-left: 0.55rem;
+			padding-left: 0.7rem;
+			background: url(images/1.png)0 0 no-repeat;
+			-webkit-background-size: 0.7rem 100%;
+			background-size: 0.7rem 100%;
+			/*隐藏原本的边框*/
+			border: hidden ;
+			border: 1px solid #e5e5e5;
+			border-radius: 10px;
+			/*轮廓*/
+			outline: none;
+		}
+		.colors{
+			color: #F2C586;
+			margin-top: 0.20rem;
+			margin-right: 0.55rem;
+			float: right;
+			font-size: 0.21rem;
+		}
+		/*登录按钮*/
+		
+		.ywSignInput{
+			/*font-size: 0.3rem;*/
+			border: hidden;
+			outline: none;
+			background-color: #F29004;
+			width: 6.4rem;
+			height: 0.9rem;
+			margin-left: 0.55rem;
+			border-radius: 10px;
+			text-align: center;
+			color: white;
+			font-size: 0.36rem;
+		}
+	</style>
+</head>
+<body>
+	<!-- 总布局 -->
+	<div class="ywWrap">
+		<!-- 头部 -->
+		<div class="h_dasHade">
+			<a href="../index/index.html"><img src="images/return.png"></a>
+			<span>登录</span>
+			<span class="h_compile"><a href="register.html">注册</a></span>
+		</div>
+		<!-- 中间图片部分 -->
+		<div class="ywBottomImages">
+			<img src="images/1.png" alt="">
+		</div>
+		<!-- 中间输入部分 -->
+		<div class="ywInput">
+			<input type="text" class="ywBack" placeholder="请输入账号/手机号">
+			<input type="password" class="ywBack" placeholder="请输入密码">
+			<a href="forget-Password.html"><strong class="colors">忘记密码？</strong></a>
+		</div>
+		<!-- 登录按钮 -->
+		<div class="ywSign">
+			<input type="button" class="ywSignInput" value="登录">
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+
+<script type="text/javascript">
+	//获取输入框
+	var ipts = document.querySelectorAll(".ywBack");
+	//获取按钮
+	var btn = document.querySelector(".ywSignInput");
+
+	btn.onclick = function(){
+		if(ipts[0].value =="" || ipts[1].value == ""){
+			alert("账号或密码不正确！");
+		}else{
+			window.location.href = '../my/home/mine.html';
+		}
+	}
+</script>
+</html>

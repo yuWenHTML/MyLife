@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/classfiy_index.css" />
+	</head>
+
+	<body>
+		<div id="classify_wrap">
+			<!--头部-->
+			<div class="classify_header">分类</div>
+			<!--内容-分类-->
+			<ul class="classify_fenlei">
+				<li id="liftfoot">生活食品<img data-face="img/up1.jpg" src="img/up2.jpg" /></li>
+				<li>价格从高到低<img data-face="img/up1.jpg" src="img/up2.jpg" /></li>
+				<li>销量优先<img data-face="img/up1.jpg" src="img/up2.jpg" /></li>
+			</ul>
+			<!--分类-筛选-->
+			<ul class="classify_shaixuan">
+				<li>
+					<a href="###">生活食品</a>
+				</li>
+				<li>
+					<a href="###">生活用品</a>
+				</li>
+				<li>
+					<a href="###">生活家具</a>
+				</li>
+				<li>
+					<a href="###">百货</a>
+				</li>
+				<li>
+					<a href="###">家电</a>
+				</li>
+				<li>
+					<a href="###">汽车配件</a>
+				</li>
+				<li>
+					<a href="###">箱包</a>
+				</li>
+				<li>
+					<a href="###">珠宝</a>
+				</li>
+			</ul>
+			<!--内容-产品-->
+			<ul class="classify_content clear">
+				<li>
+					<a href="classfiy_details.html"><img src="img/pkcui.jpg" /></a>
+					<a href="classfiy_details.html">
+						<p>休闲零食五味园pk脆独立小包装500g</p>
+					</a>
+					<span>￥10.9</span><span class="yuanjia">原价:￥12.8</span>
+				</li>
+				<li>
+					<a href="classfiy_details.html"><img src="img/bigenguo.jpg" /></a>
+					<a href="classfiy_details.html">
+						<p>坚果特产山核桃奶油味碧根果210gx2袋</p>
+					</a>
+					<span>￥29.5</span><span class="yuanjia">原价:￥42.5</span>
+				</li>
+				<li>
+					<a href="classfiy_details.html"><img src="img/pkcui.jpg" /></a>
+					<a href="classfiy_details.html">
+						<p>休闲零食五味园pk脆独立小包装500g</p>
+					</a>
+					<span>￥10.9</span><span class="yuanjia">原价:￥12.8</span>
+				</li>
+				<li>
+					<a href="classfiy_details.html"><img src="img/bigenguo.jpg" /></a>
+					<a href="classfiy_details.html">
+						<p>坚果特产山核桃奶油味碧根果210gx2袋</p>
+					</a>
+					<span>￥29.5</span><span class="yuanjia">原价:￥42.5</span>
+				</li>
+			</ul>
+			<!--底部-->
+			<div class="classify_footer">
+				<ul class="footer_ul">
+					<li>
+						<a href="../index/index.html"><img src="img/index.jpg" />
+							<p>首页</p>
+						</a>
+					</li>
+					<li>
+						<a href="../great/vip.html"><img src="img/vip.jpg" />
+							<p>会员</p>
+						</a>
+					</li>
+					<li>
+						<a href="classify_index.html"><img src="img/classify.jpg" />
+							<p>分类</p>
+						</a>
+					</li>
+					<li>
+						<a href="../shop/shopCart.html"><img src="img/shopping.jpg" />
+							<p>购物车</p>
+						</a>
+					</li>
+					<li>
+						<a href="../login/ywSign.html"><img src="img/myself.jpg" />
+							<p>我的</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$("#liftfoot").click(function() {
+			if($(".classify_shaixuan").css("display") == "none") {
+				$(".classify_shaixuan").show();
+			} else {
+				$(".classify_shaixuan").hide();
+			}
+		});
+		$(".classify_fenlei li").click(function() {
+			$(".classify_fenlei li").css("color", "gray");
+			$(this).css("color", "#f29004");
+			
+		});
+		
+		
+		$(".classify_fenlei li").eq(1).click(function() {
+			if($(".classify_shaixuan").css("display") == "block"){
+				$(".classify_shaixuan").css({
+					"display":"none"				})
+			}
+			
+		});
+		$(".classify_fenlei li").eq(2).click(function() {
+			if($(".classify_shaixuan").css("display") == "block"){
+				$(".classify_shaixuan").css({
+					"display":"none"				})
+			}
+			
+		});
+		$(".classify_fenlei li img").click(function() {
+			$(".classify_fenlei li img").attr("src", "img/up2.jpg");
+			$(this).attr("src", "img/up1.jpg");
+		});
+		$(".classify_shaixuan li").click(function() {
+			$(".classify_shaixuan li").css("background", "#f1f1f1")
+			$(this).css("background", "#f29004");
+		});
+		$(".classify_shaixuan li a").click(function() {
+			$(".classify_shaixuan li a").css("color", "black");
+			$(this).css("color", "white");
+		});
+	</script>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>收货地址</title>
+	<link rel="stylesheet" type="text/css" href="css/h_profile.css">
+</head>
+<body>
+	<div class="h_siteWrap">
+	<!-- 头部 -->
+		<div class="h_siteHade">
+			<a href="h_profile.html"><img src="img/reu.png"></a>
+			<span>收货地址</span>
+			<a href="h_profile.html"><span class="h_topUp">完成</span></a>
+		</div>
+	<!-- 编辑地址 -->
+	<div class="h_address">
+		<ul>
+			<li class="h_bomAdd">收货人姓名:<input type="text" name=""></li>
+			<li class="h_bomAdd">联系电话:<input type="text" name=""></li>
+			<li class="h_bomAdd">城市：选择<span>省级</span><img src="img/down.png" alt="">选择<span>城市</span><img src="img/down.png" alt="">选择<span>区</span><img src="img/down.png" alt="">
+			
+			</li>
+			<li class="h_bomAdd">小区、街道、门牌等详细信息</li>
+			<li>设为默认地址<img src="img/swick_bg.png" alt="" class="h_swickBg">
+			<img src="img/swick.png" class="h_swick"></li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<script type="text/javascript">
+	
+</script>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"    name="viewport">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+	<title>我的收藏</title>
+	<link rel="stylesheet" type="text/css" href="css/h_collect.css">
+</head>
+<body>
+	<div class="h_collectWrap" id="h_compBg">
+	<!-- 头部 -->
+		<div class="h_collHade">
+			<a href="h_collect.html"><img src="img/return.png"></a>
+			<span>我的收藏</span>
+			<span class="h_topUp"><a href="h_collect.html">完成</a></span>
+		</div>
+	<!-- 详情 -->
+		<div class="h_colllect">
+			<ul>
+				<li class="h_bom">
+					<img src="img/dui.png" class="h_compXuan">
+					<img src="img/nut.png">
+					<span>
+						坚果特产山核桃奶油味碧根...
+					</span><br />
+					<span class="h_price">￥29.5</span>
+				</li>
+				<li>
+					<img src="img/quan.png" class="h_compXuan">
+					<img src="img/nut.png">
+					<span>
+						坚果特产山核桃奶油味碧根...
+					</span><br />
+					<span class="h_price">￥29.5</span>
+				</li>
+			</ul>
+		</div>
+		<!-- 删除 -->
+		<div class="h_del">
+			<img src="img/quan.png" class="h_check">
+			<span>全选</span>
+			<button>删除</button>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+	//获取列表
+	$lis = $(".h_colllect ul li");
+	//获取按钮
+	$liImgs = $(".h_colllect ul li .h_compXuan")
+	//获取全选按钮
+	$btnImg = $(".h_del img");
+	$btnQuan = $(".h_del span");
+
+	$liImgs.click(function(){
+		if($(this).attr("src") =="img/dui.png"){
+			$(this).attr("src","img/quan.png");
+		}else{
+			$(this).attr("src","img/dui.png");
+		}
+	})
+	$btnImg.click(function(){
+		if($btnImg.attr("src") == "img/quan.png"){
+			for(var i = 0; i<$liImgs.length; i++){
+				$liImgs.eq(i).attr("src","img/dui.png");
+			}
+			$btnImg.attr("src","img/dui.png");
+			$btnQuan.text("全不选");
+		}else{
+			for(var j = 0; j<$liImgs.length; j++){
+				$liImgs.eq(j).attr("src","img/quan.png");
+			}
+			$btnImg.attr("src","img/quan.png");
+			$btnQuan.text("全选");
+		}
+	})
+
+</script>
+</html>
